@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+.navbar {
+    height: 100px;
+    .navbar-toggler {
+        position: absolute;
+        right: 0;
+      
+    }
+    
+    #searchform {
+        padding-bottom: 1rem;
+    }
+
+}
+
+#searchform {
+    position: absolute;
+    max-width: 100%;
+    padding-top: 1rem;
+    width: 100%;
+    padding-right: 25rem;
+    padding-left: 25rem;
+
+    .wrapper {
+
+
+
+        form {
+
+            .accomodation-link
+            {
+                border-right: 2px solid  #e7e7e7;
+            }
+            .locations-link
+            {
+                border-right: 2px solid #e7e7e7;
+            }
+            .numberofppl-link
+            {
+                border-right: 2px solid #e7e7e7;
+            }
+
+
+
+            .row {
+                padding: 0.750rem;
+
+                #_cols
+                {
+                    a{
+                        text-decoration: none;
+
+                        .search_title {
+                            position: relative;
+                            display: block;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 400;
+                            color:black;
+                            text-transform: uppercase;
+
+                            i {
+                                color: #c5c5c5;
+                                margin-right: 0.5rem;
+                            }
+                        }
+
+                        .search_label {
+                            position: relative;
+                            display: block;
+                            font-family: 'Poppins', sans-serif;
+                            color: #c5c5c5;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+            .dropdown-filter
+            {
+                position: absolute;
+                margin-left: 0;
+                width: 57.5vw;
+                background: white;
+                padding: 2rem;
+                overflow: hidden;
+                font-family: 'Poppins', sans-serif;
+
+                &.active {
+                    display: none;
+                }
+
+
+                .row {
+
+                    .countries {
+                        
+                        font-weight: 600;
+                        ul {
+
+                            height: 100%;
+
+                            li {
+                                padding: 0.750rem;
+                                list-style: none;
+                                a {
+                                    color: black;
+                                    text-decoration: none;
+                                    padding: 1rem;
+
+                                }
+                                &:hover {
+
+                                    background: $seablue-light;
+                                    
+                                    a {
+                                        color: white;
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    .towns {
+
+
+
+
+                        &__lithuania {
+                            
+
+                            a {
+                                color:black;
+                                text-decoration: none;
+                                font-weight: 500;
+
+                                &:hover {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+            
+                        &__latvija {
+                            display: none;
+
+                            a{
+                                color:black;
+                                text-decoration: none;
+                                font-weight: 500;
+
+                                &:hover {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+            
+                        &__uzsienis {
+                            display: none;
+                            a{
+                                color:black;
+                                text-decoration: none;
+
+                                font-weight: 500;
+
+                                &:hover {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+
+
+
+
+
+
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.dropdown-list {
+    position: absolute;
+    transform: translateX(100%);
+    width: 19vw;
+    max-height: 250px;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 0;
+
+    ul {
+        padding-left: 0.350rem;
+        li {
+            list-style: none;
+
+            a {
+                color:black;
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+            }
+
+            &:hover {
+                background: $seablue-light;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    
+    
+    &.active {
+        display: none;
+        transition: 1s;
+    }
+}
+
+#search__box {
+    border: 3px solid rgb(221, 190, 16);
+    border-radius: 10px;
+}
+
+#search__icon {
+    position: relative;
+    color: yellow;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+
+
+.country_option {
+    
+    &.active {
+        background: $seablue-light;
+    }
+}
+
+
+@media screen and (max-width: 1451px) {
+    #searchform {
+        display: none;
+    }
+    
+    #mobilesearch {
+     position: absolute;
+     width: 50%;
+     left: 25%;
+     background: rgb(211, 183, 122);
+     border: 3px solid rgb(221, 190, 16);
+      border-radius: 10px;
+        .row {
+            padding: 15px 200px;
+            margin-top: 2rem;
+
+            .col-md-8 {
+
+                .menu-btn {
+                    position: absolute;
+                    top: 12px;
+                    left: 10px;
+                    text-decoration: none;
+                    font-family: 'Poppins', sans-serif;
+                    color: $black;
+
+                   .mobile-title {
+                       display: none; // Truksta responsivness, todel siuo metu nerodomas 
+                   }
+
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 1451px) {
+
+    #mobilesearch {
+        display: none;
+    }
+}
+@media screen and (max-width: 760px) {
+
+    #mobilesearch {
+        height: 3rem;
+
+        .row{
+            
+            .col-md-8 {
+
+                .menu-btn {
+
+                    top: 4px;
+                }
+            }
+        }
+    }
+}

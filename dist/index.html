@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagrindinis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!--HEADER SECTION-->
+    <nav class="navbar navbar-light bg-light fixed-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt=""></a>
+        <!--SEARCH-->
+        <div class="container" id="searchform">
+            <div class="wrapper">
+                <form>
+                  <div id="search__box" class="row">
+                    <div id="_cols" class="col-4 locations-link">
+                      <a href="#">
+                        <span class="search_title"><i class="fas fa-map-marker-alt"></i>Location</span>
+                        <span class="search_label">Country, Town</span>
+                      </a>
+                    </div>
+                    <div id="_cols" class="col-4 accomodation-link">
+                      <a href="#">
+                        <span class="search_title"><i class="fas fa-home"></i>Accomodation</span>
+                        <span class="search_label">Apartments</span>
+                      </a>
+                    </div>
+                    <div id="_cols" class="col-3 numberofppl-link">
+                      <a href="#">
+                        <span class="search_title"><i class="fas fa-user-friends"></i>Holidaymakers</span>
+                        <span class="search_label">Number of guests</span>
+                      </a>
+                    </div>
+                    <div id="_cols" class="col-1">
+                        <a href="#">
+                          <i id="search__icon" class="fas fa-search"></i>
+                        </a>
+                      </div>
+                  </div>
+                    <div id="dropdown-filter" class="dropdown-filter active shadow-lg">
+                     <div class="row">
+                       <div class="col-md-2 countries">
+                         <ul>
+                           <li id="selected_by_default" class="country_option active"><a>Lietuvoje</a></li>
+                           <li id="option_second" class="country_option"><a>Latvijoje</a></li>
+                           <li id="option_third" class="country_option"><a>Užsienyje</a></li>
+                         </ul>
+                       </div>
+                       <div class="col-md-9 towns__lithuania">
+                         <div class="row dropdown-towns-firstrow">
+                            <div class="col-md-2">
+                              <a href="">Palanga</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Giruliai</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Ventė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Šventoji</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Pervalka</a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-secondrow">
+                            <div class="col-md-2">
+                              <a href="">Melnragė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Rusnė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Kunigiškiai</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Preila</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Monciškė</a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-thirdrowrow">
+                            <div class="col-md-2">
+                              <a href="">Smiltynė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Svencelė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Kretinga</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Nida</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Mingė</a>
+                            </div>
+                         </div>
+                       </div>
+          
+                       <div class="col-md-9 towns__latvija">
+                         <div class="row dropdown-towns-firstrow">
+                            <div class="col-md-2">
+                              <a href="">Jūrmala</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Kolkos rajonas</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Saulkrastų rajonas</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Ryga</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Pervalka</a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-secondrow">
+                            <div class="col-md-2">
+                              <a href="">Jūrkalnė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Liepoja</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Ventspilis</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Talsų rajonas</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Engurės rajonas</a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-thirdrowrow">
+                            <div class="col-md-2">
+                              <a href="">Adažų rajonas</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Kolkos rajonas</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Jūrmalciems</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Nida</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Salacgrivas rajonas</a>
+                            </div>
+                         </div>
+                       </div>
+          
+                       <div class="col-md-9 towns__uzsienis">
+                         <div class="row dropdown-towns-firstrow">
+                            <div class="col-md-2">
+                              <a href="">Tenerifė</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Šri Lanka</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-secondrow">
+                            <div class="col-md-2">
+                              <a href="">Gran Kanarija</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="">Kipras</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                         </div>
+                         <div class="row dropdown-towns-thirdrowrow">
+                            <div class="col-md-2">
+                              <a href="">Maljorka</a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                            <div class="col-md-2">
+                              <a href=""></a>
+                            </div>
+                         </div>
+                       </div>
+                       </div>
+                     </div>
+                    </div>
+                      <div class="dropdown-list active shadow-lg">
+                         <ul>
+                           <li><a href="#">Viešbučiai</a></li>
+                           <li><a href="#">Svečių namai, vilos</a></li>
+                           <li><a href="#">Poilsio namai</a></li>
+                           <li><a href="#">Apartmentų ir butų nuoma</a></li>
+                           <li><a href="#">Kambarių nuoma</a></li>
+                           <li><a href="#">Namelių nuoma</a></li>
+                           <li><a href="#">Namų ir kotedžų nuoma</a></li>
+                           <li><a href="#">Sodybos</a></li>
+                           <li><a href="#">Hosteliai</a></li>
+                           <li><a href="#">Moteliai</a></li>
+                           <li><a href="#">Stovyklos</a></li>
+                           <li><a href="#">Kempingai</a></li>
+                           <li><a href="#">Laivai, jachtos</a></li>
+                         </ul>
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+          <!--END OF SEARCH-->
+
+          <!--MOBILE -->
+          <div id="mobilesearch" class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <a class="menu-btn" href="">
+                        <svg viewBox="0 0 100 80" width="30" height="40">
+                            <rect width="100" height="10">      </rect>
+                            <rect y="30" width="100" height="10"></rect>
+                            <rect y="60" width="100" height="10"></rect>
+                          </svg>
+                          <span class="mobile-title">Atostogų paieška</span>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <!--END OF MOBILE-->
+
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Holiday</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <h3>Location</h3>
+                <div class="nav-item-location">
+                  <ul class="nav-item-location-list px-1">
+                    <li><a class="nav-link active" aria-current="page">Lithuania</a></li>
+                    <li><a class="nav-link" aria-current="page">Latvia</a></li>
+                    <li><a class="nav-link" aria-current="page">Abroad</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <div class="container-fluid locations__lithuania">
+                <div class="row">
+                  <div class="col-md-3 col1">
+                    <ul>
+                      <li><a href="#">Palanga</a></li>
+                      <li><a href="#">Pervalka</a></li>
+                      <li><a href="#">Karkle</a></li>
+                      <li><a href="#">Vente</a></li>
+                      <li><a href="#">Kretinga</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3 col2">
+                    <ul>
+                      <li><a href="#">Klaipėda</a></li>
+                      <li><a href="#">Preila</a></li>
+                      <li><a href="#">Giruliai</a></li>
+                      <li><a href="#">Melnragė</a></li>
+                      <li><a href="#">Smiltynė</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--END OF HEADER-->
+
+
+
+
+<!--START OF POSTS THREAD-->
+<section class="main-section">
+  <h3 class="display-6 fw-bold text-center title">Populiariausios poilsio vietos visoje Lietuvoje</h1>
+  <div class="container-fluid">
+    <!--FIRST ROW-->
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postrow">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/nida_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Nida</a></h5>
+              <p class="card-text">Tai kurortinė gyvenvietė, kiekvieną vasarą sulaukianti apie 200-300 tūkst. (per metus Neringą aplanko apie 700 tūkst.) turistų - daug iš Lietuvos bei vakarų Europos, ypač Vokietijos.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/karkle_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Karkle</a></h5>
+              <p class="card-text">Yra etnokultūrinis parkas, informacinė ekspozicija apie gintaro istoriją, vaikų poilsiavietė, paplūdimiai, išlikusios senos sodybos, kuršių kapinės.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--SECOND ROW-->
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postrow">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/klaipeda_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Klaipėda</a></h5>
+              <p class="card-text">Svarbiausias Vakarų Lietuvos pramonės centras, kelių, geležinkelių ir jūrų transporto mazgas. 2019 m. pab. sudarytame savivaldybių gerovės indekso reitinge Klaipėdos miestui teko trečia vieta.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/palanga_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Palanga</a></h5>
+              <p class="card-text">Palanga - respublikinės reikšmės klimatinis, balneologinis ir purvo terapijos kurortas. Gausu sanatorijų, sveikatingumo centrų, ligoninių (Palangos, Reabilitacijos).</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--THIRD ROW-->
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postrow">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/smiltyne_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Smiltynė</a></h5>
+              <p class="card-text">Beveik visą Smiltynę dengia miškai (šiaurinėje dalyje - Smiltynės miškas, pietinėje - Neringos miškas), prie jūros - kopos ir paplūdimiai.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/melnrage_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Melnragė</a></h5>
+              <p class="card-text">Klaipėdos kurortinė zona. Pietinė dalis vadinama Melnrage I, o šiaurinė dalis - Melnrage II.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOURTH ROW-->
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postrow">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/giruliai_thumbnail.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Giruliai</a></h5>
+              <p class="card-text">Klaipėdos miesto dalis, esanti į šiaurės vakarus nuo miesto centro, prie Baltijos jūros. Plėtojamas turizmas, poilsio verslas, yra poilsiaviečių bei stovyklaviečių.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/thumbnails/sventoji_thumbnail.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="postpage.html">Šventoji</a></h5>
+              <p class="card-text">Kurortinė gyvenvietė Baltijos pajūryje, buvęs miestelis Palangos miesto savivaldybės šiaurėje, 12 km nuo Palangos centro.</p>
+              <p class="card-text"><small class="text-muted">Skelbimų: 1</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!--START FOOTER-->
+<section class="footer">
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-snapchat"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <ul class="list">
+    <li>
+      <a href="about.html">Apie</a>
+    </li>
+    <li>
+      <a href="guesthouse.html">Pasiskelbti</a>
+    </li>
+    <li>
+      <a href="guesthouse.html">Kontaktai</a>
+    </li>
+    <li>
+      <a href="rules.html">Taisyklės</a>
+    </li>
+    <li>
+      <a href="privacypolicy.html">Privatumo politika</a>
+    </li>
+  </ul>
+  <p class="copyright">
+    Guest House © 2021 Visos teisės saugomos
+
+  </p>
+</section>
+<!--END OF FOOTER-->
+    
+    <script src= "js/dropdown.js"></script>
+    <script src="https://kit.fontawesome.com/c0e5391576.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

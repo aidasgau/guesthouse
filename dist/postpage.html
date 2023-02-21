@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skelbimai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!--HEADER SECTION-->
+  <nav class="navbar navbar-light bg-light fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+      <!--SEARCH-->
+      <div class="container" id="searchform">
+          <div class="wrapper">
+              <form>
+                <div id="search__box" class="row">
+                  <div id="_cols" class="col-4 locations-link">
+                    <a href="#">
+                      <span class="search_title"><i class="fas fa-map-marker-alt"></i>Location</span>
+                      <span class="search_label">Country, Town</span>
+                    </a>
+                  </div>
+                  <div id="_cols" class="col-4 accomodation-link">
+                    <a href="#">
+                      <span class="search_title"><i class="fas fa-home"></i>Accomodation</span>
+                      <span class="search_label">Apartments</span>
+                    </a>
+                  </div>
+                  <div id="_cols" class="col-3 numberofppl-link">
+                    <a href="#">
+                      <span class="search_title"><i class="fas fa-user-friends"></i>Holidaymakers</span>
+                      <span class="search_label">Number of guests</span>
+                    </a>
+                  </div>
+                  <div id="_cols" class="col-1">
+                      <a href="#">
+                        <i id="search__icon" class="fas fa-search"></i>
+                      </a>
+                    </div>
+                </div>
+                  <div id="dropdown-filter" class="dropdown-filter active shadow-lg">
+                   <div class="row">
+                     <div class="col-md-2 countries">
+                       <ul>
+                         <li id="selected_by_default" class="country_option active"><a>Lietuvoje</a></li>
+                         <li id="option_second" class="country_option"><a>Latvijoje</a></li>
+                         <li id="option_third" class="country_option"><a>Užsienyje</a></li>
+                       </ul>
+                     </div>
+                     <div class="col-md-9 towns__lithuania">
+                       <div class="row dropdown-towns-firstrow">
+                          <div class="col-md-2">
+                            <a href="">Palanga</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Giruliai</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Ventė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Šventoji</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Pervalka</a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-secondrow">
+                          <div class="col-md-2">
+                            <a href="">Melnragė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Rusnė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Kunigiškiai</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Preila</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Monciškė</a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-thirdrowrow">
+                          <div class="col-md-2">
+                            <a href="">Smiltynė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Svencelė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Kretinga</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Nida</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Mingė</a>
+                          </div>
+                       </div>
+                     </div>
+        
+                     <div class="col-md-9 towns__latvija">
+                       <div class="row dropdown-towns-firstrow">
+                          <div class="col-md-2">
+                            <a href="">Jūrmala</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Kolkos rajonas</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Saulkrastų rajonas</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Ryga</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Pervalka</a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-secondrow">
+                          <div class="col-md-2">
+                            <a href="">Jūrkalnė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Liepoja</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Ventspilis</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Talsų rajonas</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Engurės rajonas</a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-thirdrowrow">
+                          <div class="col-md-2">
+                            <a href="">Adažų rajonas</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Kolkos rajonas</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Jūrmalciems</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Nida</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Salacgrivas rajonas</a>
+                          </div>
+                       </div>
+                     </div>
+        
+                     <div class="col-md-9 towns__uzsienis">
+                       <div class="row dropdown-towns-firstrow">
+                          <div class="col-md-2">
+                            <a href="">Tenerifė</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Šri Lanka</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-secondrow">
+                          <div class="col-md-2">
+                            <a href="">Gran Kanarija</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="">Kipras</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                       </div>
+                       <div class="row dropdown-towns-thirdrowrow">
+                          <div class="col-md-2">
+                            <a href="">Maljorka</a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                          <div class="col-md-2">
+                            <a href=""></a>
+                          </div>
+                       </div>
+                     </div>
+                     </div>
+                   </div>
+                  </div>
+                    <div class="dropdown-list active shadow-lg">
+                       <ul>
+                         <li><a href="#">Viešbučiai</a></li>
+                         <li><a href="#">Svečių namai, vilos</a></li>
+                         <li><a href="#">Poilsio namai</a></li>
+                         <li><a href="#">Apartmentų ir butų nuoma</a></li>
+                         <li><a href="#">Kambarių nuoma</a></li>
+                         <li><a href="#">Namelių nuoma</a></li>
+                         <li><a href="#">Namų ir kotedžų nuoma</a></li>
+                         <li><a href="#">Sodybos</a></li>
+                         <li><a href="#">Hosteliai</a></li>
+                         <li><a href="#">Moteliai</a></li>
+                         <li><a href="#">Stovyklos</a></li>
+                         <li><a href="#">Kempingai</a></li>
+                         <li><a href="#">Laivai, jachtos</a></li>
+                       </ul>
+                    </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+        <!--END OF SEARCH-->
+
+        <!--MOBILE -->
+        <div id="mobilesearch" class="container">
+          <div class="row">
+              <div class="col-md-8">
+                  <a class="menu-btn" href="">
+                      <svg viewBox="0 0 100 80" width="30" height="40">
+                          <rect width="100" height="10">      </rect>
+                          <rect y="30" width="100" height="10"></rect>
+                          <rect y="60" width="100" height="10"></rect>
+                        </svg>
+                        <span class="mobile-title">Atostogų paieška</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+        <!--END OF MOBILE-->
+
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Holiday</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <h3>Location</h3>
+              <div class="nav-item-location">
+                <ul class="nav-item-location-list px-1">
+                  <li><a class="nav-link active" aria-current="page">Lithuania</a></li>
+                  <li><a class="nav-link" aria-current="page">Latvia</a></li>
+                  <li><a class="nav-link" aria-current="page">Abroad</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <div class="container-fluid locations__lithuania">
+              <div class="row">
+                <div class="col-md-3 col1">
+                  <ul>
+                    <li><a href="#">Palanga</a></li>
+                    <li><a href="#">Pervalka</a></li>
+                    <li><a href="#">Karkle</a></li>
+                    <li><a href="#">Vente</a></li>
+                    <li><a href="#">Kretinga</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col2">
+                  <ul>
+                    <li><a href="#">Klaipėda</a></li>
+                    <li><a href="#">Preila</a></li>
+                    <li><a href="#">Giruliai</a></li>
+                    <li><a href="#">Melnragė</a></li>
+                    <li><a href="#">Smiltynė</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+             
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Holiday</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <h3>Location</h3>
+                <div class="nav-item-location">
+                  <ul class="nav-item-location-list px-1">
+                    <li><a class="nav-link active" aria-current="page">Lithuania</a></li>
+                    <li><a class="nav-link" aria-current="page">Latvia</a></li>
+                    <li><a class="nav-link" aria-current="page">Abroad</a></li>
+                  </ul>
+                </div>
+              </li>
+              <div class="container-fluid locations__lithuania">
+                <div class="row">
+                  <div class="col-md-3 col1">
+                    <ul>
+                      <li><a href="#">Palanga</a></li>
+                      <li><a href="#">Pervalka</a></li>
+                      <li><a href="#">Karkle</a></li>
+                      <li><a href="#">Vente</a></li>
+                      <li><a href="#">Kretinga</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3 col2">
+                    <ul>
+                      <li><a href="#">Klaipėda</a></li>
+                      <li><a href="#">Preila</a></li>
+                      <li><a href="#">Giruliai</a></li>
+                      <li><a href="#">Melnragė</a></li>
+                      <li><a href="#">Smiltynė</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+      <!--END OF HEADER-->
+
+
+
+      <div id="sortby_list" class="container">
+        <ul class="sort_by_links text-center">
+          <i class="fas fa-arrow-down"></i>     <a href="#">Žemiausia kaina viršuje</a>
+          <i class="far fa-star"></i>           <a href="#">Įvertinimas</a>
+          <i class="fas fa-water"></i>          <a href="#">Atstumas iki jūros</a>
+          <i class="fas fa-map-marker-alt"></i> <a href="#">Atstumas iki centro</a>
+        </ul>
+      </div>
+
+<section class="posts_main">
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/1.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Palanga Visit - Apartamentai & SPA Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">39-199 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/2.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Stilingi, erdvūs 2-jų kambarių „Ingos apartamentai“ su židiniu ir 14 m² terasa</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">65-139 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/3.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Roberto Vila. Kambariai + Apartamentai. Palanga. Centras</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">15-120 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/4.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">“SENOJI PALANGA” - kambarių ir apartamentų nuoma Palangos CENTRE!</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">30-125 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/5.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Svečių Namai "ELENA"</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">30-200 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/6.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Gintarinė KOPA</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">45-130 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/7.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">EUROVILA Palangos senamiestyje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">85-200 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/8.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Pajūrio apartamentai Kunigiškėse. Tik 30 metrų iki jūros!</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">150-170 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/9.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Modernus 2-jų kambarių butas „Apartamentai Nr.24“ 500 m iki jūros</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">59-129 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/10.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Puikiai įrengti vieno miegamojo apartamentai su terasa ir uždaru kiemu Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">100-250 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/11.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Apartamentai "Montika" Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">40-70 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/12.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Vila "Gintarinė smilga" su baseinu, tik 400m iki jūros</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">140-150 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/13.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Poilsis Palangoje-Kunigiškiuose „7 sakalai“</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">25-75 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/14.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">VIENARAGIO APARTAMENTAI Prie parko Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">65-190 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/15.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Svečių namai Palangoje "Anikė"</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">30-75 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/16.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Gerika guest house (Svečių namai)</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">20-80 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/17.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Vila "DIA" - Apartamentų nuoma Palangoje, prie pat pajūrio pušyno</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">30-130 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/18.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Poilsio namai Palangoje "SAULĖ"</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">18-95 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/19.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Svečių namai Palangoje "INKARAS"</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">20-80 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/20.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Danijaus kotedžai, butai pačiame Palangos centre, tik 5 min. iki jūros</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">30-100 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/21.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Apartamentai Jūsų poilsiui komplekse "Mano jūra"</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">40-160 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/22.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Kambariai ir apartamentai Palangos centre – „Vila Elena“</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">35-110 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/23.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Jaukiai įrengti dviejų kambarių apartamentai Jūsų poilsiui Palangos širdyje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">60-110 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/24.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Svečių namai GUEST HOUSE 777 Palangos centre, šalia parko ir Jūros, su patogumais</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">25-69 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/25.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Palanga Visit - Apartamentai & SPA Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">39-199 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/26.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Kambariai viloje "Jūros akis" J. Basanavičiaus g. Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">25-100 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center postspage_main">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/22.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Dviejų kambarių apartamentai „MONTIKA“ Jūsų poilsiui Palangoje</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">45-70 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/postthumbnails/postpage_1/28.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="post.html">Namelio su pirtimi ir namo nuoma 2 km nuo Palangos</a></h5>
+                <i id="remember" class="far fa-heart"></i>
+                <p class="card-text">80-150 €</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<!--START OF PAGE NAV-->
+ <div id="pagenav" class="container text-center">
+   <ul>
+    <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
+     <li class="current"><a href="#">1</a></li>
+     <li><a href="postpage_2_example.html">2</a></li>
+     <li><a href="postpage_3_example.html">3</a></li>
+     <li class="disabled"><a href="#">...</a></li>
+     <li><a href="#">10</a></li>
+     <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+   </ul>
+ </div>
+<!--END OF PAGE NAV-->
+
+
+
+<!--START FOOTER-->
+<section class="footer">
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-snapchat"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <ul class="list">
+    <li>
+      <a href="about.html">Apie</a>
+    </li>
+    <li>
+      <a href="guesthouse.html">Pasiskelbti</a>
+    </li>
+    <li>
+      <a href="guesthouse.html">Kontaktai</a>
+    </li>
+    <li>
+      <a href="rules.html">Taisyklės</a>
+    </li>
+    <li>
+      <a href="privacypolicy.html">Privatumo politika</a>
+    </li>
+  </ul>
+  <p class="copyright">
+    Guest House © 2021 Visos teisės saugomos
+
+  </p>
+</section>
+<!--END OF FOOTER-->
+
+      <script src= "js/dropdown.js"></script>
+      <script src="https://kit.fontawesome.com/c0e5391576.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

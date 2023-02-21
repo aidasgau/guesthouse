@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+.main-section {
+  position: relative;
+  margin-top: 8rem;
+}
+
+.main-section .container .row {
+  background-color: #fff;
+}
+
+.main-section img {
+  padding-top: 1rem;
+  height: 128px;
+}
+
+.main-section .title {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.main-section .card {
+  padding-left: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.main-section .postrow {
+  padding-bottom: 1.3rem;
+}
+
+.main-section .card-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-section .card-title a:hover {
+  color: #0080FF;
+}
+
+.navbar {
+  height: 100px;
+}
+
+.navbar .navbar-toggler {
+  position: absolute;
+  right: 0;
+}
+
+.navbar #searchform {
+  padding-bottom: 1rem;
+}
+
+#searchform {
+  position: absolute;
+  max-width: 100%;
+  padding-top: 1rem;
+  width: 100%;
+  padding-right: 25rem;
+  padding-left: 25rem;
+}
+
+#searchform .wrapper form .accomodation-link {
+  border-right: 2px solid  #e7e7e7;
+}
+
+#searchform .wrapper form .locations-link {
+  border-right: 2px solid #e7e7e7;
+}
+
+#searchform .wrapper form .numberofppl-link {
+  border-right: 2px solid #e7e7e7;
+}
+
+#searchform .wrapper form .row {
+  padding: 0.750rem;
+}
+
+#searchform .wrapper form .row #_cols a {
+  text-decoration: none;
+}
+
+#searchform .wrapper form .row #_cols a .search_title {
+  position: relative;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+}
+
+#searchform .wrapper form .row #_cols a .search_title i {
+  color: #c5c5c5;
+  margin-right: 0.5rem;
+}
+
+#searchform .wrapper form .row #_cols a .search_label {
+  position: relative;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  color: #c5c5c5;
+  font-size: 14px;
+}
+
+#searchform .wrapper form .dropdown-filter {
+  position: absolute;
+  margin-left: 0;
+  width: 57.5vw;
+  background: white;
+  padding: 2rem;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+#searchform .wrapper form .dropdown-filter.active {
+  display: none;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries {
+  font-weight: 600;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries ul {
+  height: 100%;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries ul li {
+  padding: 0.750rem;
+  list-style: none;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries ul li:hover {
+  background: #0080FF;
+}
+
+#searchform .wrapper form .dropdown-filter .row .countries ul li:hover a {
+  color: white;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__lithuania a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__lithuania a:hover {
+  font-weight: 700;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__latvija {
+  display: none;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__latvija a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__latvija a:hover {
+  font-weight: 700;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__uzsienis {
+  display: none;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__uzsienis a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#searchform .wrapper form .dropdown-filter .row .towns__uzsienis a:hover {
+  font-weight: 700;
+}
+
+.dropdown-list {
+  position: absolute;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 19vw;
+  max-height: 250px;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 0;
+}
+
+.dropdown-list ul {
+  padding-left: 0.350rem;
+}
+
+.dropdown-list ul li {
+  list-style: none;
+}
+
+.dropdown-list ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.dropdown-list ul li:hover {
+  background: #0080FF;
+}
+
+.dropdown-list ul li:hover a {
+  color: white;
+}
+
+.dropdown-list.active {
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#search__box {
+  border: 3px solid #ddbe10;
+  border-radius: 10px;
+}
+
+#search__icon {
+  position: relative;
+  color: yellow;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.country_option.active {
+  background: #0080FF;
+}
+
+@media screen and (max-width: 1451px) {
+  #searchform {
+    display: none;
+  }
+  #mobilesearch {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    background: #d3b77a;
+    border: 3px solid #ddbe10;
+    border-radius: 10px;
+  }
+  #mobilesearch .row {
+    padding: 15px 200px;
+    margin-top: 2rem;
+  }
+  #mobilesearch .row .col-md-8 .menu-btn {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+  }
+  #mobilesearch .row .col-md-8 .menu-btn .mobile-title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1451px) {
+  #mobilesearch {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #mobilesearch {
+    height: 3rem;
+  }
+  #mobilesearch .row .col-md-8 .menu-btn {
+    top: 4px;
+  }
+}
+
+.post-section .container .post_title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding-top: 5rem;
+}
+
+.post-section .container .image-gallery .main-image img {
+  width: 100%;
+}
+
+.post-section .container .thumbnail-images .thumbnails li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.post-section .container .thumbnail-images .thumbnails li img {
+  width: 150px;
+}
+
+.post-section .container .thumbnail-images .thumbnails .open_gallery {
+  width: 150px;
+  height: 100px;
+  background: khaki;
+  -webkit-transform: translateY(-19%);
+          transform: translateY(-19%);
+}
+
+.post-section .container .thumbnail-images .thumbnails .open_gallery a i {
+  position: relative;
+  color: black;
+  font-size: 2.5rem;
+  top: 25%;
+  right: -35%;
+}
+
+.post-section .container .thumbnail-images .thumbnails .open_gallery_label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.post-section .container .post_title {
+  position: relative;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.post-section .quick_icons {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.post-section .quick_icons .main_icons {
+  display: inline-block;
+}
+
+.post-section .quick_icons #btn_phone {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #e7e7e7;
+}
+
+.post-section .quick_icons .side_icons {
+  border: none;
+}
+
+.post-section .quick_icons a {
+  font-size: 24px;
+  color: #0080FF;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.post-section .quick_icons a:hover {
+  opacity: 1;
+}
+
+.post-section_description {
+  background: chocolate;
+}
+
+.post-section h2 {
+  margin-top: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+.post-section .table {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4rem;
+}
+
+#mainpost-title {
+  padding-top: 7rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+#info-box {
+  margin-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#info-box dt {
+  padding-top: 0.6rem;
+}
+
+#info-box dd {
+  border-bottom: 1px solid #e7e7e7;
+  padding-top: -1rem;
+}
+
+#info-box dd i {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer {
+  margin: 0;
+  padding-top: 6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+}
+
+.footer .social a {
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.footer .social a:hover {
+  opacity: 0.9;
+}
+
+li::marker {
+  color: #0080FF;
+  font-weight: 700;
+}
+
+.rules {
+  font-family: 'Poppins', sans-serif;
+}
+
+li::marker {
+  color: #0080FF;
+}
+
+.about-info {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.privacy-policy {
+  height: 100vh;
+}
+
+.posts_main {
+  padding-top: 1rem;
+}
+
+.posts_main img {
+  padding-bottom: 4rem;
+  padding-top: 1rem;
+}
+
+.posts_main i {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #0080FF;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.posts_main .card {
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.posts_main .postspage_main {
+  padding-bottom: 1.3rem;
+}
+
+.posts_main .card-title {
+  padding-right: 1rem;
+}
+
+.posts_main .card-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.posts_main .card-title a:hover {
+  color: #0080FF;
+}
+
+#sortby_list {
+  padding-top: 10rem;
+}
+
+#sortby_list ul a {
+  position: relative;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+#sortby_list ul a:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+#sortby_list ul a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #0080FF;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+#pagenav {
+  font-family: 'Poppins', sans-serif;
+}
+
+#pagenav ul li {
+  display: inline;
+  padding: 0.5rem;
+  background: #e7e7e7;
+  border-radius: 5px;
+}
+
+#pagenav ul li i:hover {
+  color: #0080FF;
+}
+
+#pagenav ul li a {
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+#pagenav ul li a:hover {
+  color: #0080FF;
+}
+
+#pagenav ul li:hover {
+  background: #e9e9e9;
+}
+
+#pagenav ul li.disabled {
+  background: #fff;
+}
+
+#pagenav ul li.disabled a:hover {
+  color: #000;
+}
+
+#pagenav ul li.current {
+  background: #e9e9e9;
+}
+
+#pagenav ul li.current a {
+  color: #0080FF;
+}
+
+#guesthouse-contacts {
+  font-family: 'Poppins', sans-serif;
+}
+
+#map {
+  height: 280px;
+  width: 100%;
+}
+
+.nav-item-location-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-item-location-list li {
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.nav-item-location-list li a {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  font-weight: bold;
+}
+
+.locations .row li {
+  list-style: none;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1500;
+  top: 15px;
+}
+/*# sourceMappingURL=styles.css.map */

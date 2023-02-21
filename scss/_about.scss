@@ -1,0 +1,11 @@
+@import 'variables';
+
+
+li::marker {
+    color:$seablue-light;
+}
+
+.about-info {
+    height:100vh;
+    font-family: 'Poppins', sans-serif;
+}
