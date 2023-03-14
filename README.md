@@ -1,2 +1,2 @@
 # guesthouse
-First project using html, css (scss), bootstrap, javascript
+First project made using html, css (scss framework), bootstrap, vanilla javascript
