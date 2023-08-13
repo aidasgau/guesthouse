@@ -1,2 +1,2 @@
 # guesthouse
-First project made using html, css (scss framework), bootstrap, vanilla javascript
+Kambarių nuomos svetainės vartotojo sąsaja (front-end) su keliais statiniais puslapiais
